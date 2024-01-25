@@ -38,6 +38,7 @@ public class InterviewerControllerTest {
     @Test
     @DisplayName("Controller should return a list of interviewers")
     public void findAllTest() {
+        // Arrange
         List<InterviewerDTO> fakeData = new LinkedList<>();
 
         InterviewerDTO fakeInterviewer = new InterviewerDTO();
@@ -77,6 +78,7 @@ public class InterviewerControllerTest {
         // Act
         InterviewerDTO result = controller.save(dto);
 
+        // Assert
         assertNotNull(result);
         assertEquals(dto.getName(), result.getName());
         assertEquals(dto.getEmail(), result.getEmail());
